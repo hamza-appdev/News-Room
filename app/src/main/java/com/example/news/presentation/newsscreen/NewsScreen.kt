@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.pager.HorizontalPager
@@ -56,6 +57,7 @@ import com.example.news.presentation.component.RetryContent
 import com.example.news.presentation.component.SearchAppBar
 import com.example.news.presentation.component.categoryTabRow
 import com.example.news.ui.theme.RoyalBlue
+import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
@@ -127,6 +129,8 @@ fun NewsScreen (
         )
     }
 
+
+
     //Search bar
     Column(
         modifier = Modifier.fillMaxSize(),
@@ -134,9 +138,10 @@ fun NewsScreen (
         Crossfade(targetState = state.isSearchBarVisible) {isVisiable->
             if (isVisiable){
                 Column (){
-                    Spacer(modifier = Modifier.height(30.dp))
                     SearchAppBar(
-                        modifier = Modifier.focusRequester(focusRequester),
+                        modifier = Modifier.focusRequester(focusRequester)
+                            .statusBarsPadding()
+                        ,
                         value = state.searchQuery,
                         onValueChange ={NewValue->
                             onEvent(NewsScreenEvent.OnScreenQuerychanged(NewValue))

@@ -1,6 +1,9 @@
 package com.example.news.presentation.component
 
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -15,6 +18,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
@@ -30,42 +34,43 @@ fun SearchAppBar(
     oncloseiconclicked:()->Unit,
     onsearchiconclicked:()->Unit
 ) {
-    androidx.compose.material3.TextField(
-        modifier = modifier.fillMaxWidth(),
-        value=value,
-        onValueChange = onValueChange,
-        textStyle = TextStyle(color = Color.White, fontSize = 16.sp),
-        leadingIcon = {
-         Icon(
-             imageVector = Icons.Filled.Search, contentDescription = "",
-             tint = Color.White.copy(alpha = 0.7f)
-         )
-        },
-        placeholder = {
-           Text(
-                text = "Search...",
-                style = TextStyle(color = Color.White.copy(alpha = 0.7f))
-            )
-        },
-        trailingIcon = {
-            IconButton(onClick = {
-                if (value.isNotEmpty()) onValueChange("")
-                else oncloseiconclicked()
-            }) {
+
+        androidx.compose.material3.TextField(
+            modifier = modifier.fillMaxWidth(),
+            value = value,
+            onValueChange = onValueChange,
+            textStyle = TextStyle(color = Color.White, fontSize = 20.sp),
+            leadingIcon = {
                 Icon(
-                    imageVector = Icons.Filled.Close, contentDescription = "",
-                    tint = Color.White
+                    imageVector = Icons.Filled.Search, contentDescription = "",
+                    tint = Color.White.copy(alpha = 0.7f)
                 )
-            }
-        },
-        keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
-       keyboardActions = KeyboardActions (onSearch = {onsearchiconclicked()}),
-        colors = TextFieldDefaults.colors(
-            focusedContainerColor = MaterialTheme.colorScheme.primaryContainer,
-            unfocusedContainerColor = MaterialTheme.colorScheme.primaryContainer,
-            cursorColor = Color.White,
-            focusedIndicatorColor = Color.White
+            },
+            placeholder = {
+                Text(
+                    text = "Search...",
+                    style = TextStyle(color = Color.White.copy(alpha = 0.7f))
+                )
+            },
+            trailingIcon = {
+                IconButton(onClick = {
+                    if (value.isNotEmpty()) onValueChange("")
+                    else oncloseiconclicked()
+                }) {
+                    Icon(
+                        imageVector = Icons.Filled.Close, contentDescription = "",
+                        tint = Color.White
+                    )
+                }
+            },
+            keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
+            keyboardActions = KeyboardActions(onSearch = { onsearchiconclicked() }),
+            colors = TextFieldDefaults.colors(
+                focusedContainerColor = MaterialTheme.colorScheme.primaryContainer,
+                unfocusedContainerColor = MaterialTheme.colorScheme.primaryContainer,
+                cursorColor = Color.White,
+                focusedIndicatorColor = Color.White
+            )
         )
-    )
 
 }

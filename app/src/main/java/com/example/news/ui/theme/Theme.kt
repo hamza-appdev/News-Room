@@ -64,6 +64,7 @@ fun NewsTheme(
     }
 
 
+
     MaterialTheme(
         colorScheme = colorScheme,
         typography = Typography,
