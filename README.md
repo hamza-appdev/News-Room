@@ -37,8 +37,7 @@ This app delivers  news updates through **API integration**, featuring a clean, 
 ---
 ## 🖼️ Preview
 <p align="center">
-<img width="400" height="600" alt="Home Screen" src="https://github.com/user-attachments/assets/8b42f970-6100-404f-9eab-fef836837288" />
-/> &nbsp; &nbsp;
+<img width="400" height="600" alt="Home Screen" src="https://github.com/user-attachments/assets/8b42f970-6100-404f-9eab-fef836837288" /> &nbsp; &nbsp;
 <img width="400" height="600" alt="Read Article" src="https://github.com/user-attachments/assets/a2f99e6a-603f-452d-b4ee-3e2cd4712bcf" />
  </p>
 <br><br>
