@@ -36,17 +36,23 @@ This app delivers  news updates through **API integration**, featuring a clean, 
 
 ---
 ## 🖼️ Preview
+<p align="center">
 <img width="400" height="400" alt="Home Screen" src="https://github.com/user-attachments/assets/e2f5a8cb-cc2b-4ce8-9095-533ee674bef6" 
 /> &nbsp; &nbsp;
 <img width="400" height="400" alt="Read Article" src="https://github.com/user-attachments/assets/19b3496b-0cf8-4bc4-8241-c3d5e4d4747d" />
+ </p>
 <br><br>
+<p align="center">
 <img width="400" height="400" alt="Search Something" src="https://github.com/user-attachments/assets/0efe8228-bc08-437f-933d-07b64fd43877" />
 &nbsp; &nbsp; 
 <img width="400" height="400" alt="In Drak Mode" src="https://github.com/user-attachments/assets/f67c3126-acd1-4293-b7b4-f18eb0dbc1be" />
+  </p>
 <br><br>
+ <p align="center">
 <img width="400" height="400" alt="Read Article (2)" src="https://github.com/user-attachments/assets/48cb140d-8138-45e7-892c-68758444dc04" />
 &nbsp; &nbsp;
 <img width="400" height="400" alt="6" src="https://github.com/user-attachments/assets/83170a50-23b9-4ae8-8fe3-c5b6aee229e3" />
+   </p>
 ---
 
 ###  Clone the repository
