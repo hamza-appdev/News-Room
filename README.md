@@ -32,8 +32,8 @@ This app delivers  news updates through **API integration**, featuring a clean, 
 - 🧭 Navigate through categories like Business, Sports, and Tech  
 - ⚡ Fast and smooth API integration  
 - 🎨 Fully responsive UI built with Compose  
-- 🧠 Clean, maintainable architecture using MVVM and DI  
-
+- 🧠 Clean, maintainable architecture using MVVM and DI
+  
 ---
 ## 🖼️ Preview
 <p align="center">
